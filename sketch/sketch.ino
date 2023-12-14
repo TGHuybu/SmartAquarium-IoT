@@ -1,5 +1,7 @@
+#include <dummy.h>
 #include <WiFi.h>
 #include <PubSubClient.h>
+#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
 const int trigWaterPin = D0;
