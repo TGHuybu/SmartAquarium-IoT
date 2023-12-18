@@ -1,9 +1,11 @@
 #include <Servo.h>
 #include <Wire.h>
+#include <ESP8266WiFi.h> //wifi for esp8266
 #include <LiquidCrystal_I2C.h>
-#include "pitches.h"
+// #include "pitches.h" //comment vi ko su dung dc
 #include <OneWire.h>
 #include <DallasTemperature.h>
+#include <RTClib.h>
 
 #define W_ULTRASONIC_TRIG D0
 #define W_ULTRASONIC_ECHO D1
@@ -30,6 +32,11 @@ LiquidCrystal_I2C lcd(LCD_I2C_ADDR, LCD_COLUMNS, LCD_ROWS);
 OneWire oneWire(TEMP);
 DallasTemperature tempSensor(&oneWire);
 
+// Set time to open the servo
+int targetHour = 13;
+int targetMinute = 30;
+RTC_DS3231 rtc;  // Use RTC_DS1307 for DS1307 RTC module
+
 /* Other variables */
 int noteIndex = 0;
 unsigned long lastNoteTime = 0;
@@ -48,6 +55,17 @@ void setup() {
   /* LCD */
   // Initialize the Wire library with D5 (SCL) and D6 (SDA)
   Wire.begin(LCD_SCL, LCD_SDA);
+  // Set up rtc 
+  if (!rtc.begin()) {
+    Serial.println("Couldn't find RTC");
+    while (1);
+  }
+
+  if (rtc.lostPower()) {
+    Serial.println("RTC lost power, let's set the time!");
+    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+  }
+
 
   lcd.begin(LCD_COLUMNS, LCD_ROWS);
   // Turn on the backlight (if available on your LCD)
@@ -62,6 +80,12 @@ void setup() {
 }
 
 void loop() {
+  DateTime now = rtc.now();
+  // Check if it's time to run the servo
+  if (now.hour() == targetHour && now.minute() == targetMinute) {
+    controlServo();
+  }
+
   // Time buzzer
   controlBuzzer();
 
