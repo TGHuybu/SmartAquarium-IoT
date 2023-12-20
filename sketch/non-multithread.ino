@@ -239,8 +239,6 @@ void buzzerSong1() {
     4, 4
   };
 
-  // Index to keep track of the current note
-
   // Play the melody
   if (noteIndex < sizeof(melody) / sizeof(melody[0])) {
     int noteDuration = 1000 / noteDurations[noteIndex];
@@ -289,8 +287,6 @@ void buzzerSong2() {
     4, 4, 4, 4,
     4, 4, 2, 4
   };
-
-  // Index to keep track of the current note
 
   // Play the melody
   if (noteIndex < sizeof(melody) / sizeof(melody[0])) {
