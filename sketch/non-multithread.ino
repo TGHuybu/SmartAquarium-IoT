@@ -159,7 +159,7 @@ void loop() {
 void mqttConnect() {
   while(!mqttClient.connected()) {
     Serial.println("Attemping MQTT connection...");
-    String clientId = "ESP32Client-";
+    String clientId = "ESP8266Client-";
     clientId += String(random(0xffff), HEX);
     if(mqttClient.connect(clientId.c_str())) {
       Serial.println("connected");
@@ -354,5 +354,6 @@ void displayLCD() {
     lcd.setCursor(0, 1); // Set the cursor to the first column and 2nd row
     lcd.print(currentSong);
   }
-  lcdCurrentScreen++;
+  // lcdCurrentScreen++;
+  if (lcdCurrentScreen >= 3) lcdCurrentScreen = 1;
 }
