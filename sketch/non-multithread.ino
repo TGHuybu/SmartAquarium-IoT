@@ -36,7 +36,6 @@ DallasTemperature tempSensor(&oneWire);
 
 /* Other variables */
 int noteIndex = 0;
-unsigned long lastNoteTime = 0;
 int lcdCurrentScreen = 1;
 float currentTemperature = 0;
 long waterHeight = 0;
