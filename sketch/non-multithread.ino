@@ -350,6 +350,6 @@ void displayLCD() {
     lcd.setCursor(0, 1); // Set the cursor to the first column and 2nd row
     lcd.print(currentSong);
   }
-  // lcdCurrentScreen++;
   if (lcdCurrentScreen >= 3) lcdCurrentScreen = 1;
+  else lcdCurrentScreen++;
 }
