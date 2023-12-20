@@ -214,6 +214,7 @@ void controlServo(bool toOpen) {
 
 void setSongName(String songName) {
   currentSong = songName;
+  noteIndex = 0;
 }
 
 void buzzerSong1() {
