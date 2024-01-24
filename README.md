@@ -1,5 +1,5 @@
 # Smart Aquarium
-Final project for HCMUS' course on Physics for *Information Technology (Internet of Things)*.
+Final project for [HCMUS](https://en.hcmus.edu.vn/)' course on Physics for *Information Technology (Internet of Things)*.
 
 The device is built using the ESP8266 NodeMCU microchip and various sensors. 
 The aquarium have Wi-Fi support and can be controlled remotely through a web interface built with [Node-RED](https://nodered.org/).
