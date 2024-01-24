@@ -1,6 +1,15 @@
 # Smart Aquarium
 Final project for HCMUS' course on Physics for *Information Technology (Internet of Things)*.
 
+The device is built using the ESP8266 NodeMCU microchip and various sensors. 
+The aquarium have Wi-Fi support and can be controlled remotely through a web interface built with [Node-RED](https://nodered.org/).
+
+## Navigate the repository
+- `sketch/`: contains the source code for your IoT device (`sketch.ino`).
+- `.json` file is the Node-RED diagram for the web interface and flows.
+- `.pdf` file is the final report of the project, writen in **VIETNAMESE**.
+- `.stl` file is the 3D model of the device.
+
 ## Node-RED Guide (*simplified*)
 ### Installation
 - Make sure `npm` is installed!
