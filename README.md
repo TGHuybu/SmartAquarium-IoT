@@ -1,13 +1,15 @@
-# SmartFishtank - IOT HCMUS
+# Smart Aquarium
+Final project for HCMUS' course on Physics for *Information Technology (Internet of Things)*.
 
-## Installation
-- `npm install -g node-red`
-
-## How to run
+## Node-RED Guide (*simplified*)
+### Installation
+- Make sure `npm` is installed!
+- Run in terminal: `npm install -g node-red`
+### Usage
 - Run the following command in your terminal: `node-red`
 - Navigate to http://localhost:1880
 
-## Install Nodes
+### Node-RED prerequisites
 - From the menu at the top right corner, select `Manage palette`, then click the `Install` tab.
 - Find the following nodes to install:
    - node-red
