@@ -6,7 +6,7 @@ The aquarium have Wi-Fi support and can be controlled remotely through a web int
 
 ## Navigate the repository
 - `sketch/`: contains the source code for your IoT device (`sketch.ino`).
-- `.json` file is the Node-RED diagram for the web interface and flows.
+- `.json` file is the Node-RED diagram for the web interface and flows. Be cautious because the web is not yet optimized :(.
 - `.pdf` file is the final report of the project, writen in **VIETNAMESE**.
 - `.stl` file is the 3D model of the device.
 
