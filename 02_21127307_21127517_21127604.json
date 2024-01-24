@@ -1,0 +1,1740 @@
+[
+    {
+        "id": "0b4736d2ea6582f9",
+        "type": "tab",
+        "label": "Authentication Flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1ed71b29b81d81c8",
+        "type": "tab",
+        "label": "Main Flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "52e5e9bd68d1fa0c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "e797e8c8b67ffc1f",
+        "type": "ui_tab",
+        "name": "Log In",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "eb3e0ec3a0a1115c",
+        "type": "ui_group",
+        "name": "Log In",
+        "tab": "e797e8c8b67ffc1f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a0c430cf0bb8deca",
+        "type": "ui_group",
+        "name": "Sign Up",
+        "tab": "301bd97dcbc8a7e3",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aec5c7098c72046f",
+        "type": "database-config",
+        "name": "FishTankDB",
+        "authType": "anonymous",
+        "claims": {},
+        "createUser": false,
+        "useClaims": false
+    },
+    {
+        "id": "301bd97dcbc8a7e3",
+        "type": "ui_tab",
+        "name": "Sign Up",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "54d032fafb8c0350",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "da06ca693471d878",
+        "type": "ui_group",
+        "name": "Sensor Data",
+        "tab": "54d032fafb8c0350",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aa338098be145479",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a52d905295b668f2",
+        "type": "ui_group",
+        "name": "Interactive",
+        "tab": "54d032fafb8c0350",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "86ac66fd1d33f541",
+        "type": "ui_group",
+        "name": "Statistics",
+        "tab": "54d032fafb8c0350",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bfb9a08a69225e1f",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "303134b9ca9a6a62",
+        "type": "ui_form",
+        "z": "0b4736d2ea6582f9",
+        "name": "Log In",
+        "label": "",
+        "group": "eb3e0ec3a0a1115c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Email",
+                "value": "email",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Password",
+                "value": "password",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "email": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "0c68ec37c30de45d",
+                "b8f153f1da95bba5"
+            ]
+        ]
+    },
+    {
+        "id": "2f924c98e3af0268",
+        "type": "ui_button",
+        "z": "0b4736d2ea6582f9",
+        "name": "",
+        "group": "eb3e0ec3a0a1115c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "To Sign Up",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "05ceb2a067caff66"
+            ]
+        ]
+    },
+    {
+        "id": "499bbbd34f7198e4",
+        "type": "ui_ui_control",
+        "z": "0b4736d2ea6582f9",
+        "name": "To Sign Up",
+        "events": "all",
+        "x": 510,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a828e4a72b2894cb",
+        "type": "ui_button",
+        "z": "0b4736d2ea6582f9",
+        "name": "",
+        "group": "a0c430cf0bb8deca",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "To Log In",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 680,
+        "wires": [
+            [
+                "2d7853888c8884ba"
+            ]
+        ]
+    },
+    {
+        "id": "d56f495bd97dbc40",
+        "type": "ui_ui_control",
+        "z": "0b4736d2ea6582f9",
+        "name": "To Log In",
+        "events": "all",
+        "x": 480,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c97a6d845f133fff",
+        "type": "function",
+        "z": "0b4736d2ea6582f9",
+        "name": "check_password_match",
+        "func": "msg.payload = (msg.payload.password_1 == msg.payload.password_2) ? \"Y\" : \"N\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 560,
+        "wires": [
+            [
+                "ea802ffc3cf193a8"
+            ]
+        ]
+    },
+    {
+        "id": "ea802ffc3cf193a8",
+        "type": "switch",
+        "z": "0b4736d2ea6582f9",
+        "name": "check_valid",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Y",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "N",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 590,
+        "y": 560,
+        "wires": [
+            [
+                "f6828d5830ad59be"
+            ],
+            [
+                "2e139c095b8afd47"
+            ]
+        ]
+    },
+    {
+        "id": "6b0d06b7482a7275",
+        "type": "firebase-out",
+        "z": "0b4736d2ea6582f9",
+        "name": "",
+        "database": "aec5c7098c72046f",
+        "path": "users",
+        "pathType": "str",
+        "priority": 1,
+        "queryType": "push",
+        "x": 990,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "ca64898f9084626e",
+        "type": "function",
+        "z": "0b4736d2ea6582f9",
+        "name": "save_user",
+        "func": "global.set(\"email\", msg.payload.email);\nglobal.set(\"password\", msg.payload.password_1);\nglobal.set(\"aquarium_height\", msg.payload.aquarium_height);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f6828d5830ad59be",
+        "type": "function",
+        "z": "0b4736d2ea6582f9",
+        "name": "process_new_user",
+        "func": "msg.payload = {\n    email: global.get(\"email\"),\n    password: global.get(\"password\"),\n    username: global.get(\"email\").split(\"@\")[0],\n    aquarium_height: global.get(\"aquarium_height\")\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 520,
+        "wires": [
+            [
+                "6b0d06b7482a7275"
+            ]
+        ]
+    },
+    {
+        "id": "0c68ec37c30de45d",
+        "type": "function",
+        "z": "0b4736d2ea6582f9",
+        "name": "save_user",
+        "func": "global.set(\"email\", msg.payload.email);\nglobal.set(\"password\", msg.payload.password);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8f153f1da95bba5",
+        "type": "firebase-get",
+        "z": "0b4736d2ea6582f9",
+        "name": "GET users",
+        "constraint": {},
+        "database": "aec5c7098c72046f",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "users",
+        "pathType": "str",
+        "useConstraint": false,
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "f58f630160509e48",
+                "d867224f66b1ca77"
+            ]
+        ]
+    },
+    {
+        "id": "f58f630160509e48",
+        "type": "function",
+        "z": "0b4736d2ea6582f9",
+        "name": "load_user_data",
+        "func": "var data = msg.payload;\nvar users = [];\n\nfor (var id in data) {\n    var user_data = data[id];\n    users.push(user_data);\n}\n\nmsg.payload = users\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "6f672ae415fb95c9"
+            ]
+        ]
+    },
+    {
+        "id": "6f672ae415fb95c9",
+        "type": "function",
+        "z": "0b4736d2ea6582f9",
+        "name": "authenticate",
+        "func": "var users = msg.payload;\nvar email = global.get(\"email\");\nvar password = global.get(\"password\");\n\nfor (let i = 0; i < users.length; i++) {\n    if (users[i].email == email && users[i].password == password) {\n        msg.payload = \"Y\";\n        return msg;\n    }\n}\n\nmsg.payload = \"N\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 180,
+        "wires": [
+            [
+                "1a5e6b4885d00a20"
+            ]
+        ]
+    },
+    {
+        "id": "1a5e6b4885d00a20",
+        "type": "switch",
+        "z": "0b4736d2ea6582f9",
+        "name": "check_valid",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Y",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "N",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 730,
+        "y": 260,
+        "wires": [
+            [
+                "3ad60376d81e0444",
+                "ed5761696280a27b"
+            ],
+            [
+                "6947a54a6498a158"
+            ]
+        ]
+    },
+    {
+        "id": "903c17fb0ecca788",
+        "type": "ui_form",
+        "z": "0b4736d2ea6582f9",
+        "name": "Sign Up",
+        "label": "",
+        "group": "a0c430cf0bb8deca",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Email",
+                "value": "email",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Password",
+                "value": "password_1",
+                "type": "password",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Retype password",
+                "value": "password_2",
+                "type": "password",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Aquarium height (cm)",
+                "value": "aquarium_height",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "email": "",
+            "password_1": "",
+            "password_2": "",
+            "aquarium_height": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "c97a6d845f133fff",
+                "ca64898f9084626e"
+            ]
+        ]
+    },
+    {
+        "id": "2d7853888c8884ba",
+        "type": "change",
+        "z": "0b4736d2ea6582f9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"show\":[\"Log In\"],\"hide\":[\"Sign Up\",\"Dashboard\"]},\"tab\":\"Log In\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 680,
+        "wires": [
+            [
+                "d56f495bd97dbc40"
+            ]
+        ]
+    },
+    {
+        "id": "05ceb2a067caff66",
+        "type": "change",
+        "z": "0b4736d2ea6582f9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"show\":[\"Sign Up\"],\"hide\":[\"Log In\",\"Dashboard\"]},\"tab\":\"Sign Up\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 320,
+        "wires": [
+            [
+                "499bbbd34f7198e4"
+            ]
+        ]
+    },
+    {
+        "id": "d3cbf58f7206f74b",
+        "type": "ui_toast",
+        "z": "0b4736d2ea6582f9",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Warning",
+        "name": "",
+        "x": 1190,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3ad60376d81e0444",
+        "type": "function",
+        "z": "0b4736d2ea6582f9",
+        "name": "process_user_login",
+        "func": "\nvar userdb = global.get(\"userdb\");\nvar uid;\n\nfor (var id in userdb) {\n    var user_data = userdb[id];\n    if (user_data.email == global.get(\"email\")) {\n        uid = id;\n        break;\n    }\n}\n\nglobal.set(\"logged_in_uid\", uid);\nglobal.set(\"aquarium_height\", userdb[uid].aquarium_height);\n\nmsg.payload = {\n    email: global.get(\"email\"),\n    password: global.get(\"password\"),\n    username: global.get(\"email\").split(\"@\")[0],\n    uid: uid\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 180,
+        "wires": [
+            [
+                "2b1ecd77fb0578a4"
+            ]
+        ]
+    },
+    {
+        "id": "2b1ecd77fb0578a4",
+        "type": "debug",
+        "z": "0b4736d2ea6582f9",
+        "name": "test log in",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0def51e92e8d4547",
+        "type": "ui_toast",
+        "z": "0b4736d2ea6582f9",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Warning",
+        "name": "",
+        "x": 990,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ed5761696280a27b",
+        "type": "change",
+        "z": "0b4736d2ea6582f9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"show\":[\"Dashboard\"],\"hide\":[\"Log In\",\"Sign Up\"]},\"tab\":\"Dashboard\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 240,
+        "wires": [
+            [
+                "0b3d10f35dc8f42d"
+            ]
+        ]
+    },
+    {
+        "id": "0b3d10f35dc8f42d",
+        "type": "ui_ui_control",
+        "z": "0b4736d2ea6582f9",
+        "name": "To Dashboard",
+        "events": "all",
+        "x": 1200,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d867224f66b1ca77",
+        "type": "function",
+        "z": "0b4736d2ea6582f9",
+        "name": "save_db_load",
+        "func": "global.set(\"userdb\", msg.payload)",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6947a54a6498a158",
+        "type": "change",
+        "z": "0b4736d2ea6582f9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Log in failed. Please try again",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 300,
+        "wires": [
+            [
+                "d3cbf58f7206f74b"
+            ]
+        ]
+    },
+    {
+        "id": "2e139c095b8afd47",
+        "type": "change",
+        "z": "0b4736d2ea6582f9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Something went wrong. Please try again",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 600,
+        "wires": [
+            [
+                "0def51e92e8d4547"
+            ]
+        ]
+    },
+    {
+        "id": "6e53f89205c95ffd",
+        "type": "ui_button",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "group": "da06ca693471d878",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Log Out",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "63ce04fb4936148a",
+                "7e459fb23173f8c5"
+            ]
+        ]
+    },
+    {
+        "id": "63ce04fb4936148a",
+        "type": "change",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"show\":[\"Log In\"],\"hide\":[\"Sign Up\",\"Dashboard\"]},\"tab\":\"Log In\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 40,
+        "wires": [
+            [
+                "0b9a1b4815b36494"
+            ]
+        ]
+    },
+    {
+        "id": "0b9a1b4815b36494",
+        "type": "ui_ui_control",
+        "z": "1ed71b29b81d81c8",
+        "name": "To Authentication",
+        "events": "all",
+        "x": 530,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e459fb23173f8c5",
+        "type": "function",
+        "z": "1ed71b29b81d81c8",
+        "name": "clear_current_user",
+        "func": "global.set(\"email\", \"\");\nglobal.set(\"password\", \"\");",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad080716c2949d18",
+        "type": "mqtt in",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "topic": "fishtank/sensordata",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "aa338098be145479",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "6b543ecf9e4ac65b",
+                "9c5c15f9f18291f5",
+                "dca4d872a5751482"
+            ]
+        ]
+    },
+    {
+        "id": "6b543ecf9e4ac65b",
+        "type": "function",
+        "z": "1ed71b29b81d81c8",
+        "name": "process_sensor_data",
+        "func": "var sensor_data = msg.payload.split(\",\");\nmsg.payload = sensor_data;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "67f673ea35c70ade",
+                "c60187a7c2093291"
+            ]
+        ]
+    },
+    {
+        "id": "9bed7ab69a3c9b79",
+        "type": "ui_gauge",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "group": "da06ca693471d878",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "Celcius",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 910,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "3e51a3fa88ad9b89",
+        "type": "ui_gauge",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "group": "da06ca693471d878",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Water level",
+        "label": " cm",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 910,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9c5c15f9f18291f5",
+        "type": "function",
+        "z": "1ed71b29b81d81c8",
+        "name": "process_current_user",
+        "func": "msg.payload = {\n    email: global.get(\"email\"),\n    password: global.get(\"password\"),\n    username: global.get(\"email\").split(\"@\")[0],\n    logged_in_uid: global.get(\"logged_in_uid\")\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "878fc75628975c2f",
+        "type": "ui_form",
+        "z": "1ed71b29b81d81c8",
+        "name": "Set Feeder Time",
+        "label": "Feeding fish time",
+        "group": "a52d905295b668f2",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Time",
+                "value": "time",
+                "type": "time",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "time": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 110,
+        "y": 560,
+        "wires": [
+            [
+                "113c82add007993a"
+            ]
+        ]
+    },
+    {
+        "id": "113c82add007993a",
+        "type": "function",
+        "z": "1ed71b29b81d81c8",
+        "name": "set_time_ondb",
+        "func": "\nvar time = msg.payload.time;\n\n//convert to time\nvar date = new Date(time);\nvar hoursLocal = date.getHours();\nvar minutesLocal = date.getMinutes();\n\n\nvar uid = global.get(\"logged_in_uid\");\nmsg.topic = \"users/\" + uid;\n\nmsg.payload = {\n    hour : hoursLocal,\n    minute : minutesLocal,\n    \n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 560,
+        "wires": [
+            [
+                "cf0c9b8e88821d9d"
+            ]
+        ]
+    },
+    {
+        "id": "cf0c9b8e88821d9d",
+        "type": "firebase-out",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "database": "aec5c7098c72046f",
+        "path": "topic",
+        "pathType": "msg",
+        "priority": 1,
+        "queryType": "update",
+        "x": 540,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "67f673ea35c70ade",
+        "type": "function",
+        "z": "1ed71b29b81d81c8",
+        "name": "process_temp_display",
+        "func": "var temp = msg.payload[0];\nmsg.payload = temp;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 160,
+        "wires": [
+            [
+                "9bed7ab69a3c9b79",
+                "b0be1d9dc6eccb1b",
+                "538489967c615dd8"
+            ]
+        ]
+    },
+    {
+        "id": "c60187a7c2093291",
+        "type": "function",
+        "z": "1ed71b29b81d81c8",
+        "name": "process_level_display",
+        "func": "var d_to_surface = msg.payload[1];\nvar h_aquarium = parseInt(global.get(\"aquarium_height\"));\nmsg.payload = h_aquarium - d_to_surface;\n\nif (msg.payload < 0) msg.payload = 0;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 260,
+        "wires": [
+            [
+                "3e51a3fa88ad9b89",
+                "7278dc5e717c8bb5",
+                "23b4f954bbbdbcfa"
+            ]
+        ]
+    },
+    {
+        "id": "b0be1d9dc6eccb1b",
+        "type": "ui_chart",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "group": "86ac66fd1d33f541",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Recorded Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 940,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7278dc5e717c8bb5",
+        "type": "ui_chart",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "group": "86ac66fd1d33f541",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Recorded Water Level",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 940,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "538489967c615dd8",
+        "type": "function",
+        "z": "1ed71b29b81d81c8",
+        "name": "check_safe_temp",
+        "func": "var temp = msg.payload;\n\nif (temp < 0 || temp > 100) {\n    msg.payload = \"N\";\n    return msg;\n}\n\nmsg.payload = \"Y\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 200,
+        "wires": [
+            [
+                "1a86dd7d9f8892e5"
+            ]
+        ]
+    },
+    {
+        "id": "1a86dd7d9f8892e5",
+        "type": "switch",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "N",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1110,
+        "y": 200,
+        "wires": [
+            [
+                "b3376062c8edf513"
+            ]
+        ]
+    },
+    {
+        "id": "b3376062c8edf513",
+        "type": "function",
+        "z": "1ed71b29b81d81c8",
+        "name": "create_email_warning",
+        "func": "msg.to = global.get(\"email\");\n\nmsg.topic = \"Temperature Warning\";\n\nmsg.payload = \n\"Dear user,\\n\\n\" + \n\"Your aquarium's temperature is outside of the safe range.\\n\" +\n\"Please check immediately!\\n\\n\" +\n\"Best regards,\\nHuy, Khoa & Hai of The Dev Team\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 200,
+        "wires": [
+            [
+                "8cbe8fe1aac851cf"
+            ]
+        ]
+    },
+    {
+        "id": "8cbe8fe1aac851cf",
+        "type": "e-mail",
+        "z": "1ed71b29b81d81c8",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "",
+        "dname": "",
+        "x": 1490,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "802feba1e00ec7e0",
+        "type": "ui_dropdown",
+        "z": "1ed71b29b81d81c8",
+        "name": "Select music",
+        "label": "Select Music",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "a52d905295b668f2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Twinkle Twinkle Little Star",
+                "value": "twinkle_star",
+                "type": "str"
+            },
+            {
+                "label": "Jingle Bell",
+                "value": "jingle_bell",
+                "type": "str"
+            },
+            {
+                "label": "No music",
+                "value": "null",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic/music",
+        "topicType": "msg",
+        "className": "",
+        "x": 110,
+        "y": 620,
+        "wires": [
+            [
+                "fc6e3ab9ad74abbe",
+                "c4d25c79b79362a2"
+            ]
+        ]
+    },
+    {
+        "id": "8dec2be16d6cc4fe",
+        "type": "firebase-get",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "constraint": {},
+        "database": "aec5c7098c72046f",
+        "outputType": "auto",
+        "passThrough": false,
+        "path": "topic",
+        "pathType": "msg",
+        "useConstraint": false,
+        "x": 510,
+        "y": 400,
+        "wires": [
+            [
+                "07fa0c8e7a904467"
+            ]
+        ]
+    },
+    {
+        "id": "dca4d872a5751482",
+        "type": "function",
+        "z": "1ed71b29b81d81c8",
+        "name": "load_db",
+        "func": "\nvar uid = global.get(\"logged_in_uid\");\nmsg.topic = \"users/\" + uid;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 400,
+        "wires": [
+            [
+                "8dec2be16d6cc4fe"
+            ]
+        ]
+    },
+    {
+        "id": "23b4f954bbbdbcfa",
+        "type": "function",
+        "z": "1ed71b29b81d81c8",
+        "name": "set_device_level_display",
+        "func": "msg.payload = msg.payload.toString();\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 340,
+        "wires": [
+            [
+                "518d6db35b202fa2"
+            ]
+        ]
+    },
+    {
+        "id": "518d6db35b202fa2",
+        "type": "mqtt out",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "topic": "fishtank/level_lcd",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "aa338098be145479",
+        "x": 1210,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "07fa0c8e7a904467",
+        "type": "function",
+        "z": "1ed71b29b81d81c8",
+        "name": "get_feeder_time",
+        "func": "var hour = msg.payload.hour;\nvar minute = msg.payload.minute;\n\nvar currentDate = new Date();\nvar currentHour = currentDate.getHours();\nvar currentMinute = currentDate.getMinutes();\nif (hour == currentHour && minute == currentMinute )\n    msg.payload = true;\nelse msg.payload = false;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 400,
+        "wires": [
+            [
+                "4ca022cea863ded2"
+            ]
+        ]
+    },
+    {
+        "id": "767d707b46999555",
+        "type": "debug",
+        "z": "1ed71b29b81d81c8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "c26cebc0b7bed0bc",
+        "type": "mqtt out",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "topic": "fishtank/feeder",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "aa338098be145479",
+        "x": 1020,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "17d7125e68d30fc8",
+        "type": "inject",
+        "z": "1ed71b29b81d81c8",
+        "name": "test_mail_trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1220,
+        "y": 140,
+        "wires": [
+            [
+                "b3376062c8edf513"
+            ]
+        ]
+    },
+    {
+        "id": "fc6e3ab9ad74abbe",
+        "type": "mqtt out",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "topic": "fishtank/music",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "aa338098be145479",
+        "x": 520,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "4ca022cea863ded2",
+        "type": "delay",
+        "z": "1ed71b29b81d81c8",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 480,
+        "wires": [
+            [
+                "c26cebc0b7bed0bc",
+                "767d707b46999555"
+            ]
+        ]
+    },
+    {
+        "id": "c4d25c79b79362a2",
+        "type": "debug",
+        "z": "1ed71b29b81d81c8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 700,
+        "wires": []
+    }
+]
